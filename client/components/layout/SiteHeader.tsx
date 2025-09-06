@@ -3,7 +3,15 @@ import { GraduationCap, School2, Bell, Home, ListTodo } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
-const NavItem = ({ to, label, icon: Icon }: { to: string; label: string; icon: React.ComponentType<any> }) => {
+const NavItem = ({
+  to,
+  label,
+  icon: Icon,
+}: {
+  to: string;
+  label: string;
+  icon: React.ComponentType<any>;
+}) => {
   const location = useLocation();
   const active = location.pathname === to;
   return (

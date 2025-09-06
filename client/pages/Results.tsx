@@ -6,10 +6,13 @@ import { GraduationCap, CheckCircle2 } from "lucide-react";
 export default function Results() {
   const navigate = useNavigate();
   const location = useLocation() as any;
-  const state = (location.state as { stream?: string; description?: string }) || {};
+  const state =
+    (location.state as { stream?: string; description?: string }) || {};
   const saved = (() => {
     try {
-      return JSON.parse(localStorage.getItem("career-advisor-result") || "null");
+      return JSON.parse(
+        localStorage.getItem("career-advisor-result") || "null",
+      );
     } catch {
       return null;
     }
@@ -30,23 +33,46 @@ export default function Results() {
             <GraduationCap className="h-6 w-6" />
           </div>
           <div>
-            <h1 className="text-2xl font-bold leading-tight">Recommended Stream: {stream}</h1>
-            <p className="text-sm text-muted-foreground">Based on your quiz responses</p>
+            <h1 className="text-2xl font-bold leading-tight">
+              Recommended Stream: {stream}
+            </h1>
+            <p className="text-sm text-muted-foreground">
+              Based on your quiz responses
+            </p>
           </div>
         </div>
-        <p className="mt-5 text-base leading-relaxed text-foreground/90">{description}</p>
+        <p className="mt-5 text-base leading-relaxed text-foreground/90">
+          {description}
+        </p>
 
         <div className="mt-6 grid gap-2 text-sm text-muted-foreground">
-          <div className="inline-flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-accent" /> Personalised guidance</div>
-          <div className="inline-flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-accent" /> Nearby government college suggestions</div>
-          <div className="inline-flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-accent" /> Admission & scholarship deadlines</div>
+          <div className="inline-flex items-center gap-2">
+            <CheckCircle2 className="h-4 w-4 text-accent" /> Personalised
+            guidance
+          </div>
+          <div className="inline-flex items-center gap-2">
+            <CheckCircle2 className="h-4 w-4 text-accent" /> Nearby government
+            college suggestions
+          </div>
+          <div className="inline-flex items-center gap-2">
+            <CheckCircle2 className="h-4 w-4 text-accent" /> Admission &
+            scholarship deadlines
+          </div>
         </div>
 
         <div className="mt-6 flex flex-wrap gap-3">
           <Button asChild className="rounded-full px-6">
-            <Link to={`/colleges?stream=${encodeURIComponent(stream)}`}>See Colleges</Link>
+            <Link to={`/colleges?stream=${encodeURIComponent(stream)}`}>
+              See Colleges
+            </Link>
           </Button>
-          <Button variant="outline" className="rounded-full px-6" onClick={() => navigate("/quiz")}>Retake Quiz</Button>
+          <Button
+            variant="outline"
+            className="rounded-full px-6"
+            onClick={() => navigate("/quiz")}
+          >
+            Retake Quiz
+          </Button>
         </div>
       </div>
     </div>

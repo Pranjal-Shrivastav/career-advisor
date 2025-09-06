@@ -68,22 +68,29 @@ export default function Colleges() {
       <div className="mb-6">
         <h1 className="text-2xl font-bold">Nearby Government Colleges</h1>
         <p className="text-sm text-muted-foreground">
-          Showing colleges{stream ? ` for ${stream}` : " across streams"}. All institutions listed are government/public.
+          Showing colleges{stream ? ` for ${stream}` : " across streams"}. All
+          institutions listed are government/public.
         </p>
       </div>
 
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
         {list.map((c) => (
-          <div key={c.name} className="flex flex-col rounded-2xl border bg-card p-5 shadow-sm">
+          <div
+            key={c.name}
+            className="flex flex-col rounded-2xl border bg-card p-5 shadow-sm"
+          >
             <div className="flex items-start justify-between gap-3">
               <div>
-                <h3 className="text-lg font-semibold leading-tight">{c.name}</h3>
+                <h3 className="text-lg font-semibold leading-tight">
+                  {c.name}
+                </h3>
                 <div className="mt-1 inline-flex items-center gap-1 text-xs text-muted-foreground">
                   <MapPin className="h-3.5 w-3.5" /> {c.city}
                 </div>
               </div>
               <div className="inline-flex items-center gap-1 rounded-full bg-secondary px-2 py-1 text-xs font-medium">
-                <School2 className="h-3.5 w-3.5 text-primary" /> {c.streams.join(", ")}
+                <School2 className="h-3.5 w-3.5 text-primary" />{" "}
+                {c.streams.join(", ")}
               </div>
             </div>
 
@@ -102,7 +109,10 @@ export default function Colleges() {
               <p className="text-sm font-medium">Facilities</p>
               <div className="mt-1 flex flex-wrap gap-2">
                 {c.facilities.map((f) => (
-                  <span key={f} className="rounded-full bg-muted px-2 py-1 text-xs text-foreground/80">
+                  <span
+                    key={f}
+                    className="rounded-full bg-muted px-2 py-1 text-xs text-foreground/80"
+                  >
                     {f}
                   </span>
                 ))}

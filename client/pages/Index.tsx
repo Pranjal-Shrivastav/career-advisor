@@ -1,6 +1,13 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { CheckCircle2, Compass, School2, BellRing, Brain, Sparkles } from "lucide-react";
+import {
+  CheckCircle2,
+  Compass,
+  School2,
+  BellRing,
+  Brain,
+  Sparkles,
+} from "lucide-react";
 
 export default function Index() {
   return (
@@ -27,39 +34,60 @@ export default function Index() {
               <Button asChild size="lg" className="rounded-full px-6">
                 <Link to="/quiz">Start Quiz</Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="rounded-full px-6">
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="rounded-full px-6"
+              >
                 <Link to="#how-it-works">How it works</Link>
               </Button>
             </div>
             <div className="flex flex-wrap items-center gap-4 pt-2 text-sm text-muted-foreground">
-              <span className="inline-flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-accent" /> No signup</span>
-              <span className="inline-flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-accent" /> Free to use</span>
-              <span className="inline-flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-accent" /> Privacy-first</span>
+              <span className="inline-flex items-center gap-2">
+                <CheckCircle2 className="h-4 w-4 text-accent" /> No signup
+              </span>
+              <span className="inline-flex items-center gap-2">
+                <CheckCircle2 className="h-4 w-4 text-accent" /> Free to use
+              </span>
+              <span className="inline-flex items-center gap-2">
+                <CheckCircle2 className="h-4 w-4 text-accent" /> Privacy-first
+              </span>
             </div>
           </div>
           <div className="mx-auto w-full max-w-md md:max-w-none">
             <div className="relative rounded-3xl border bg-white p-6 shadow-xl">
-              <div className="absolute -top-3 -right-3 rounded-full bg-primary px-3 py-1 text-xs font-semibold text-white shadow">Live</div>
+              <div className="absolute -top-3 -right-3 rounded-full bg-primary px-3 py-1 text-xs font-semibold text-white shadow">
+                Live
+              </div>
               <div className="grid grid-cols-2 gap-3">
                 <div className="rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 p-4">
                   <Compass className="h-6 w-6 text-primary" />
                   <p className="mt-2 text-sm font-semibold">Stream Finder</p>
-                  <p className="text-xs text-muted-foreground">Personalized recommendations</p>
+                  <p className="text-xs text-muted-foreground">
+                    Personalized recommendations
+                  </p>
                 </div>
                 <div className="rounded-2xl bg-gradient-to-br from-accent/10 to-primary/10 p-4">
                   <School2 className="h-6 w-6 text-accent" />
                   <p className="mt-2 text-sm font-semibold">Govt. Colleges</p>
-                  <p className="text-xs text-muted-foreground">Trusted & affordable</p>
+                  <p className="text-xs text-muted-foreground">
+                    Trusted & affordable
+                  </p>
                 </div>
                 <div className="rounded-2xl bg-gradient-to-br from-primary/10 to-transparent p-4">
                   <BellRing className="h-6 w-6 text-primary" />
                   <p className="mt-2 text-sm font-semibold">Deadlines</p>
-                  <p className="text-xs text-muted-foreground">Admissions & scholarships</p>
+                  <p className="text-xs text-muted-foreground">
+                    Admissions & scholarships
+                  </p>
                 </div>
                 <div className="rounded-2xl bg-gradient-to-br from-accent/10 to-transparent p-4">
                   <Brain className="h-6 w-6 text-accent" />
                   <p className="mt-2 text-sm font-semibold">Easy Quiz</p>
-                  <p className="text-xs text-muted-foreground">Takes under 2 minutes</p>
+                  <p className="text-xs text-muted-foreground">
+                    Takes under 2 minutes
+                  </p>
                 </div>
               </div>
             </div>
@@ -68,8 +96,13 @@ export default function Index() {
       </section>
 
       {/* How it works */}
-      <section id="how-it-works" className="container mx-auto px-4 py-12 md:py-16">
-        <h2 className="text-center text-2xl font-bold md:text-3xl">How it works</h2>
+      <section
+        id="how-it-works"
+        className="container mx-auto px-4 py-12 md:py-16"
+      >
+        <h2 className="text-center text-2xl font-bold md:text-3xl">
+          How it works
+        </h2>
         <p className="mx-auto mt-2 max-w-2xl text-center text-muted-foreground">
           Answer a few questions, get your recommended stream, explore nearby
           government colleges and never miss important dates.
@@ -108,10 +141,19 @@ export default function Index() {
           <div className="absolute -left-20 -bottom-20 h-40 w-40 rounded-full bg-black/10 blur-3xl" />
           <div className="relative z-10 flex flex-col items-start gap-3 md:flex-row md:items-center md:justify-between">
             <div>
-              <h3 className="text-2xl font-bold tracking-tight">Ready to plan your future?</h3>
-              <p className="text-sm opacity-90">Take the quiz and get your personalized roadmap today.</p>
+              <h3 className="text-2xl font-bold tracking-tight">
+                Ready to plan your future?
+              </h3>
+              <p className="text-sm opacity-90">
+                Take the quiz and get your personalized roadmap today.
+              </p>
             </div>
-            <Button asChild size="lg" variant="secondary" className="rounded-full bg-white text-primary hover:bg-white/90">
+            <Button
+              asChild
+              size="lg"
+              variant="secondary"
+              className="rounded-full bg-white text-primary hover:bg-white/90"
+            >
               <Link to="/quiz">Start Quiz</Link>
             </Button>
           </div>
