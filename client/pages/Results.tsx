@@ -17,7 +17,7 @@ export default function Results() {
   const description = state.description || saved?.description;
 
   if (!stream) {
-    navigate("/quiz");
+    setTimeout(() => navigate("/quiz"), 0);
     return null;
   }
 
