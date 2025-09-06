@@ -1,4 +1,5 @@
 import { useLocation, useNavigate, Link } from "react-router-dom";
+import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { GraduationCap, CheckCircle2 } from "lucide-react";
 
@@ -16,10 +17,10 @@ export default function Results() {
   const stream = state.stream || saved?.stream;
   const description = state.description || saved?.description;
 
-  if (!stream) {
-    setTimeout(() => navigate("/quiz"), 0);
-    return null;
-  }
+  useEffect(() => {
+    if (!stream) navigate("/quiz");
+  }, [navigate, stream]);
+  if (!stream) return null;
 
   return (
     <div className="container mx-auto max-w-3xl px-4 py-10">
